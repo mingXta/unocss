@@ -112,4 +112,8 @@ export const fontWeight = {
   // int[0, 900] -> int
 } satisfies Theme['fontWeight']
 
+export const fontStretch = {
+
+}
+
 export const wordSpacing = letterSpacing satisfies Theme['letterSpacing']

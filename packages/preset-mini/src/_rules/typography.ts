@@ -68,6 +68,14 @@ export const fonts: Rule<Theme>[] = [
     ([, d], { theme }) => ({ 'font-family': theme.fontFamily?.[d] || h.bracket.cssvar.global(d) }),
     { autocomplete: 'font-$fontFamily' },
   ],
+
+  // Font Stetch/
+  [
+    /^(:?font-)stretch-(.*)$/,
+    ([, c]) => ({ 'font-stretch': c || h.bracket.global.percent(c) }
+    ),
+    { autocomplete: ['font-stretch-$fontStretch', 'font-stretch-(1/2,1/3)'] },
+  ],
 ]
 
 export const tabSizes: Rule<Theme>[] = [
